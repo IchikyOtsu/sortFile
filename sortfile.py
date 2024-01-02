@@ -40,7 +40,8 @@ def move_and_sort_files(source_folder, destination_folder):
 def main():
     print("File Sorter CLI")
     source_folder = prompt("Enter the path to the source folder: ").strip()
-    destination_folder = "C:\\Users\\legra\\Documents\\BAC2\\DEV2\\sort\\sorted"
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+    destination_folder = os.path.join(script_directory, "sorted")
     move_and_sort_files(source_folder, destination_folder)
     print("Files have been moved and sorted.")
 
